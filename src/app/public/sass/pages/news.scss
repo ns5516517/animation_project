@@ -3,7 +3,7 @@
 
 .news {
     margin-bottom: 90px;
-
+    overflow: hidden;
     .parent_news {
         position: relative;
 
@@ -11,7 +11,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            right: -250px;
+            right: -200px;
             z-index: -2;
             top: 0;
             bottom: 0;
