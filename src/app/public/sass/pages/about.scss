@@ -1,0 +1,395 @@
+@import "../base/variable.scss";
+@import "../base/mixins.scss";
+
+.about {
+    margin-bottom: 90px;
+    position: relative;
+    width: 0;
+    margin-left: 100%;
+    transition: all 0.6s ease;
+
+    &.animate {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .parent_about {
+        padding: 240px 0 120px 0;
+
+        .content_wrapper {
+            width: 50%;
+            padding-left: 30px;
+
+            .subtitle {
+                margin-bottom: 90px;
+                color: $white;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 20px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            .title {
+                margin-bottom: 90px;
+
+                h3 {
+                    color: $white;
+                    font-size: 48px;
+                    line-height: 55px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    color: $white;
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    letter-spacing: 4px;
+                    position: relative;
+                    margin-left: -30px;
+                    padding-left: 30px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 1.5px;
+                        background-color: $white_2;
+                        inset: 0;
+                        display: block;
+                    }
+                }
+            }
+
+            .btn_wrapper {
+                width: 100px;
+                height: 100px;
+                padding: 20px;
+                position: relative;
+
+                .circle_btn {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid $white;
+                    border-radius: 50%;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                    cursor: pointer;
+                    transition: all 0.6s ease;
+
+                    &:hover {
+                        background-color: $white;
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .background_wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            z-index: -1;
+
+            .bg {
+                background-image: url('../../images/banner_about.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .about {
+        margin-bottom: 70px;
+
+        .parent_about {
+            padding: 200px 0 100px 0;
+
+            .content_wrapper {
+
+                .subtitle {}
+
+                .title {
+
+                    h3 {
+                        font-size: 42px;
+                    }
+
+                    p {
+
+                        &::before {}
+                    }
+                }
+
+                .btn_wrapper {
+
+                    .circle_btn {}
+                }
+            }
+
+            .background_wrapper {
+
+                .bg {}
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .about {
+        margin-bottom: 60px;
+
+        .parent_about {
+            padding: 120px 0 60px 0;
+
+            .content_wrapper {
+
+                .subtitle {
+                    margin-bottom: 60px;
+                }
+
+                .title {
+                    margin-bottom: 60px;
+
+                    h3 {
+                        font-size: 36px;
+                    }
+
+                    p {
+
+                        &::before {}
+                    }
+                }
+
+                .btn_wrapper {
+
+                    .circle_btn {}
+                }
+            }
+
+            .background_wrapper {
+
+                .bg {}
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .about {
+        margin-bottom: 50px;
+
+        .parent_about {
+            padding: 120px 0 50px 0;
+
+            .content_wrapper {
+                width: 75%;
+
+                .subtitle {
+                    margin-bottom: 50px;
+                }
+
+                .title {
+                    margin-bottom: 50px;
+
+                    h3 {
+                        font-size: 30px;
+                        line-height: 42px;
+                    }
+
+                    p {
+
+                        &::before {}
+                    }
+                }
+
+                .btn_wrapper {
+                    width: 90px;
+                    height: 90px;
+                    padding: 10px;
+
+                    .circle_btn {}
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .about {
+        margin-bottom: 40px;
+
+        .parent_about {
+            padding: 120px 0 40px 0;
+
+            .content_wrapper {
+                width: 75%;
+
+                .subtitle {
+                    margin-bottom: 40px;
+                }
+
+                .title {
+                    margin-bottom: 40px;
+
+                    h3 {
+                        font-size: 22px;
+                        line-height: 32px;
+                    }
+
+                    p {
+
+                        &::before {}
+                    }
+                }
+
+                .btn_wrapper {
+                    width: 80px;
+                    height: 80px;
+                    padding: 10px;
+
+                    .circle_btn {}
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 375px) and (max-width: 667px) {}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+
+    .about {
+        margin-bottom: 30px;
+
+        .parent_about {
+            padding: 50px 0 50px 0;
+
+            .content_wrapper {
+                width: 100%;
+
+                .subtitle {
+                    margin-bottom: 30px;
+                }
+
+                .title {
+                    margin-bottom: 30px;
+
+                    h3 {
+                        font-size: 18px;
+                        line-height: 26px;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+
+                        &::before {}
+                    }
+                }
+
+                .btn_wrapper {
+                    width: 60px;
+                    height: 60px;
+                    padding: 10px;
+
+                    .circle_btn {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+
+    .about {
+        margin-bottom: 20px;
+
+        .parent_about {
+            padding: 40px 0 40px 0;
+
+            .content_wrapper {
+                width: 100%;
+                padding-left: 15px;
+
+                .subtitle {
+                    margin-bottom: 20px;
+                    font-size: 11px;
+                }
+
+                .title {
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: 18px;
+                        line-height: 26px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 11px;
+                        margin-left: -15px;
+                        padding-left: 15px;
+                    }
+                }
+
+                .btn_wrapper {
+                    width: 60px;
+                    height: 60px;
+                    padding: 10px;
+
+                    .circle_btn {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

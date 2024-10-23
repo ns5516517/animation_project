@@ -1,0 +1,682 @@
+@import "../base/variable.scss";
+@import "../base/mixins.scss";
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    margin-top: -73px;
+
+    .hero {
+        background-image: url('../../images/banner.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        .overlay {
+            background-color: #00000029;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .parent_banner {
+        padding: 50px 0 0 0;
+        margin-top: 73px;
+
+        .content {
+            width: 700px;
+            max-width: 100%;
+
+            &.show {
+                .subtitle {
+                    opacity: 1;
+                }
+
+                .title {
+                    span {
+                        transform: translateY(0) rotate(0);
+                    }
+                }
+
+                .call_btn {
+                    a {
+                        transform: translateY(0) rotate(0);
+                    }
+                }
+            }
+
+            .subtitle {
+                margin-bottom: 160px;
+                color: $white;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                opacity: 0;
+                transition: all 0.6s ease;
+            }
+
+            .title {
+                margin-bottom: 35px;
+                overflow: hidden;
+
+                span {
+                    display: block;
+                    color: $white;
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 100px;
+                    letter-spacing: 2px;
+                    transform: translateY(200%) rotate(25deg);
+                    transition: all 0.6s ease;
+                }
+            }
+
+            .call_btn {
+                overflow: hidden;
+
+                a {
+                    display: inline-block;
+                    color: $white;
+                    font-size: 11px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border-radius: 100px;
+                    border: 1px solid $white_2;
+                    padding: 16px 28px;
+                    transform: translateY(200%) rotate(25deg);
+                    transition: all 0.6s ease;
+
+                    &:hover {
+                        background-color: $black;
+                        border-color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .floating_area {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+
+        .featured {
+            width: 750px;
+            display: flex;
+            background-color: $bg_1;
+            align-items: center;
+
+            .left_area {
+                width: 251px;
+
+                p {
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: $black;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 3px;
+                    writing-mode: vertical-lr;
+                    margin: auto;
+                    color: $text_1;
+                    transform: rotate(180deg);
+                }
+            }
+
+            .right_area {
+                width: calc(100% - 251px);
+                background-color: $white;
+
+                a {
+                    width: 100%;
+                    padding: 60px 36px 60px 48px;
+                    display: inline-flex;
+                    justify-content: space-between;
+
+                    .content {
+                        p {
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            color: $black;
+                            margin-bottom: 8px;
+                        }
+
+                        h5 {
+                            text-transform: capitalize;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            color: $black;
+                        }
+                    }
+
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 20px;
+                        margin-left: -10px;
+                        transform: translateX(-25px);
+                        opacity: 0;
+                        transition: all 0.6s ease;
+                    }
+
+                    &:hover {
+                        .icon {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .arrow_down {
+            position: absolute;
+            right: 13%;
+            top: 0;
+
+            .inner_box {
+                padding: 20px;
+                position: relative;
+                height: 100px;
+                width: 100px;
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $white_2;
+                    border-radius: 50%;
+                    font-size: 22px;
+                    color: $white_2;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $white_2;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .banner {
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+
+                .subtitle {}
+
+                .title {
+                    span {
+                        font-size: 70px;
+                    }
+                }
+
+                .call_btn {
+                    a {}
+                }
+            }
+        }
+
+        .floating_area {
+
+            .featured {
+
+                .left_area {
+
+                    p {}
+                }
+
+                .right_area {
+
+
+                    a {
+
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .banner {
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+                width: 600px;
+
+                .subtitle {}
+
+                .title {
+                    span {
+                        font-size: 70px;
+                    }
+                }
+
+                .call_btn {
+                    a {}
+                }
+            }
+        }
+
+        .floating_area {
+
+            .featured {
+                width: 450px;
+
+                .left_area {
+                    width: 65px;
+
+                    p {}
+                }
+
+                .right_area {
+                    width: calc(100% - 65px);
+
+                    a {
+
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner {
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+                width: 500px;
+
+                .subtitle {}
+
+                .title {
+                    span {
+                        font-size: 60px;
+                        line-height: 70px;
+                    }
+                }
+
+                .call_btn {
+                    a {}
+                }
+            }
+        }
+
+        .floating_area {
+
+            .featured {
+                width: 450px;
+
+                .left_area {
+                    width: 65px;
+
+                    p {}
+                }
+
+                .right_area {
+                    width: calc(100% - 65px);
+
+                    a {
+                        padding: 50px 36px 50px 48px;
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .banner {
+        padding-bottom: 40px;
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+                width: 500px;
+
+                .subtitle {
+                    margin-bottom: 60px;
+                }
+
+                .title {
+                    span {
+                        font-size: 50px;
+                        line-height: 60px;
+                    }
+                }
+
+                .call_btn {
+                    a {}
+                }
+            }
+        }
+
+        .floating_area {
+            display: none;
+
+            .featured {
+                width: 450px;
+
+                .left_area {
+                    width: 65px;
+
+                    p {}
+                }
+
+                .right_area {
+                    width: calc(100% - 65px);
+
+                    a {
+                        padding: 50px 36px 50px 48px;
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+
+    .banner {
+        padding-bottom: 40px;
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+                width: 500px;
+
+                .subtitle {
+                    margin-bottom: 60px;
+                    font-size: 12px;
+                }
+
+                .title {
+                    span {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+
+                .call_btn {
+                    a {
+                        padding: 13px 19px;
+                    }
+                }
+            }
+        }
+
+        .floating_area {
+            .featured {
+                width: 40px;
+
+                .left_area {
+                    width: 100%;
+
+                    p {}
+                }
+
+                .right_area {
+                    width: calc(100% - 65px);
+                    display: none;
+
+                    a {
+                        padding: 50px 36px 50px 48px;
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+                display: none;
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+
+    .banner {
+        padding-bottom: 40px;
+
+        .hero {
+
+            .overlay {}
+        }
+
+        .parent_banner {
+
+            .content {
+                width: 500px;
+
+                .subtitle {
+                    margin-bottom: 60px;
+                    font-size: 12px;
+                }
+
+                .title {
+                    span {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                .call_btn {
+                    a {
+                        padding: 11px 16px;
+                    }
+                }
+            }
+        }
+
+        .floating_area {
+
+            // display: none;
+            .featured {
+                width: 40px;
+
+                .left_area {
+                    width: 100%;
+
+                    p {
+                        padding: 10px 0;
+                    }
+                }
+
+                .right_area {
+                    width: calc(100% - 65px);
+                    display: none;
+
+                    a {
+                        padding: 50px 36px 50px 48px;
+
+                        .content {
+                            p {}
+
+                            h5 {}
+                        }
+
+                        .icon {}
+                    }
+                }
+            }
+
+            .arrow_down {
+                display: none;
+
+                .inner_box {
+
+                    .icon {}
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

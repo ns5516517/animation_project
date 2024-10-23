@@ -1,0 +1,509 @@
+@import "../base/variable.scss";
+@import "../base/mixins.scss";
+
+.listing {
+    margin-bottom: 90px;
+    .parent_listing {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: calc(100% / 3);
+
+                &:nth-child(odd) {
+                    margin-top: 60px;
+                    margin-bottom: 80px;
+                }
+
+                .inner_card {
+                    opacity: 0;
+                    transform: scale(0.5) skewY(10deg) translateY(50%);
+                    transition: all 0.6s ease;
+                    position: relative;
+                    overflow: hidden;
+                    &.show {
+                        transform: scale(1) skewY(0) translateY(0);
+                        opacity: 1;
+                    }
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        background-color: $backdrop;
+                        border-radius: 50%;
+                        top: -100px;
+                        right: -100px;
+                        transition: all 0.6s cubic-bezier(0.74,-0.62, 0.27, 1.55);
+                    }
+
+                    .image {
+                        overflow: hidden;
+                        height: 466px;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .content {
+                        position: absolute;
+                        z-index: 1;
+                        inset: 0;
+                        padding: 36px 24px;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .top {
+                            p {
+                                color: $white;
+                                text-align: center;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                margin-bottom: 10px;
+                                text-transform: uppercase;
+                                letter-spacing: 3px;
+                            }
+
+                            h3 {
+                                color: $white;
+                                text-align: center;
+                                font-size: 24px;
+                                font-weight: 700;
+                                line-height: 30px;
+                                text-transform: capitalize;
+                            }
+                        }
+
+                        .bottom {
+                            .date {
+                                color: $white;
+                                text-align: center;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                text-transform: uppercase;
+                                letter-spacing: 3px;
+                            }
+                        }
+                    }
+
+                    .view {
+                        position: absolute;
+                        z-index: 5;
+                        left: 50%;
+                        top: 50%;
+                        color: $white;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        font-weight: 400;
+                        width: 100px;
+                        height: 100px;
+                        border: 1px solid $border;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: all 0.6s ease;
+                        opacity: 0;
+                        transform: translateY(48px) translateX(-50%) skewY(20deg) scale3d(0.8, 0.8, 1);
+
+                        &:hover {
+                            background-color: $white;
+                            color: $black;
+                        }
+                    }
+
+                    &:hover {
+                        transform: scale(0.95);
+                        &::after{
+                            width: 140%;
+                            height: 140%;
+                        }
+                        .view {
+                            opacity: 1;
+                            transform: translateY(-50%) translateX(-50%) skewY(0) scale3d(1, 1, 1);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .listing {
+        margin-bottom: 70px;
+        .parent_listing {
+            ul {
+                li {
+                    width: calc(100% / 3);
+    
+                    &:nth-child(odd) {
+                       
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 409px;
+                        }
+    
+                        .content {
+                           
+    
+                            .top {
+                                p {
+                                    
+                                }
+    
+                                h3 {
+                                    
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .listing {
+        margin-bottom: 60px;
+        .parent_listing {
+            ul {
+                li {
+                    width: calc(100% / 3);
+    
+                    &:nth-child(odd) {
+                        margin-top: 50px;
+                        margin-bottom: 70px;
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 309px;
+                        }
+    
+                        .content {
+                           padding: 17px;    
+                            .top {
+                                p {
+                                    
+                                }
+    
+                                h3 {
+                                    
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .listing {
+        margin-bottom: 50px;
+        .parent_listing {
+            ul {
+                
+                li {
+                    width: calc(100% / 2);
+    
+                    &:nth-child(odd) {
+                        margin-top: 40px;
+                        margin-bottom: 60px;
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 375px;
+                        }
+    
+                        .content {
+                           padding: 17px;    
+                            .top {
+                                p {
+                                    
+                                }
+    
+                                h3 {
+                                    
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .listing {
+        margin-bottom: 40px;
+        .parent_listing {
+            ul {
+                
+                li {
+                    width: calc(100% / 2);
+    
+                    &:nth-child(odd) {
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 275px;
+                        }
+    
+                        .content {
+                           padding: 17px;    
+                            .top {
+                                p {
+                                    margin-bottom: 5px;
+                                }
+    
+                                h3 {
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 375px) and (max-width: 667px) {}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+
+    .listing {
+        margin-bottom: 30px;
+        .parent_listing {
+            ul {
+                
+                li {
+                    width: 100% ;
+                    margin-bottom: 20px;
+                    &:nth-child(odd) {
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 275px;
+                        }
+    
+                        .content {
+                           padding: 17px;    
+                            .top {
+                                p {
+                                    margin-bottom: 5px;
+                                }
+    
+                                h3 {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+
+    .listing {
+        margin-bottom: 20px;
+        .parent_listing {
+            ul {
+                
+                li {
+                    width: 100% ;
+                    margin-bottom: 15px;
+                    &:nth-child(odd) {
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+    
+                    .inner_card {
+                       
+                        &::after{
+                           
+                        }
+    
+                        .image {
+                            height: 275px;
+                        }
+    
+                        .content {
+                           padding: 17px;    
+                            .top {
+                                p {
+                                    margin-bottom: 5px;
+                                }
+    
+                                h3 {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+                            }
+    
+                            .bottom {
+                                .date {
+                                  
+                                }
+                            }
+                        }
+    
+                        .view {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

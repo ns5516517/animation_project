@@ -1,0 +1,133 @@
+@import "../base/variable.scss";
+@import "../base/mixins.scss";
+
+.inner_sidebar {
+    position: sticky;
+    top: 100px;
+
+    .upper_sidebar {
+        margin-bottom: 20px;
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $black;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    }
+
+    .lower_sidebar {
+        ul {
+            li {
+                border-bottom: 1px solid $border;
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    .item {
+                        flex: 1;
+                        padding: 24px 0;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $text_1;
+                        line-height: 24px;
+                        text-transform: capitalize;
+                        transition: all 0.6s ease;
+                        transform: translateX(0);
+                    }
+
+                    span {
+                        flex: 1;
+                        transform: translateX(-30px);
+                        display: inline-block;
+                        float: right;
+                        transition: all 0.6s ease;
+                        opacity: 0;
+                        text-align: right;
+                        color: $text_1;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        .item {
+                            color: $black;
+                            transform: translateX(30px);
+                        }
+
+                        span {
+                            transform: translateX(0);
+                            opacity: 1;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .inner_sidebar {
+        .upper_sidebar {
+            margin-bottom: 15px;
+
+            p {}
+        }
+
+        .lower_sidebar {
+            ul {
+                li {
+                    a {
+                        .item {
+                            padding: 20px 0;
+                        }
+
+                        span {}
+                    }
+
+
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {}
+
+@media (min-width: 375px) and (max-width: 667px) {}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {}
+
+/* Smaller phones */
+@media (max-width: 360px) {}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
