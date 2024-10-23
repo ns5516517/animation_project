@@ -49,7 +49,7 @@ const Header = () => {
         window.addEventListener('scroll', () => {
             let scroller = window.scrollY
             console.log(scroll)
-            ref.current.style.height = `calc(${scroller}% / 2)`
+            ref.current.style.height = `calc(${scroller}% / 10)`
             navRef.current.map((val) => {
                 if(scroller > 0) {
                     val.style.color = 'black'
