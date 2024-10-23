@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import "./globals.css";
 import Header from "./components/header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './public/sass/helper/base.scss';
