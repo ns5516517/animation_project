@@ -1,4 +1,4 @@
-// File: D:\Server\data\htdocs\nextjs\new_project\src\app\page.js
+// File: D:\globiz\nextjs\new_project\animation_project\src\app\page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

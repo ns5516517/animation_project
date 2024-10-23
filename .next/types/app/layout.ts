@@ -1,4 +1,4 @@
-// File: D:\Server\data\htdocs\nextjs\new_project\src\app\layout.js
+// File: D:\globiz\nextjs\new_project\animation_project\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
